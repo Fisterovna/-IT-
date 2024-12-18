@@ -24,3 +24,13 @@ Invoke-RestMethod -Uri "http://localhost:8080/api/v1/calculate" `
 -Headers @{"Content-Type"="application/json"} `
 -Body '{"expression": "2+2*2"}'
 Если вы спросите зачем и папка и файлы это бы сделанно для "всякого случия" а то может не дай бог что то случится
+### Пример ошибки 500
+
+Если выражение содержит некорректный символ `$`, сервер вернёт ошибку 500:
+
+#### Пример запроса
+```powershell
+Invoke-RestMethod -Uri "http://localhost:8080/api/v1/calculate" `
+-Method POST `
+-Headers @{"Content-Type"="application/json"} `
+-Body '{"expression": "1+$2"}'
