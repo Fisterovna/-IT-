@@ -18,8 +18,6 @@
 
 ## Пример запроса с использованием PowerShell
 
-Для тестирования работы вашего сервиса используйте команду `Invoke-RestMethod` в PowerShell:
-
 ```powershell
 Invoke-RestMethod -Uri "http://localhost:8080/api/v1/calculate" `
 -Method POST `
