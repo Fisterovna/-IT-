@@ -11,3 +11,4 @@
 3. Перейдите в папку проекта и запустите сервер:
    ```bash
    go run ./cmd/calc_service/...
+http://localhost:8080/api/v1/calculate
