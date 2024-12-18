@@ -1,28 +1,27 @@
-calc_service
-Описание
-Простой веб-сервис для вычисления арифметических выражений.
+# Простой веб-сервис для вычисления арифметических выражений
 
-Запуск сервиса
-Установите Go.
-Склонируйте проект с GitHub.
-Перейдите в папку проекта и запустите сервер:
-bash
-Копировать код
-go run ./cmd/calc_service/...
-Сервер будет доступен по адресу: http://localhost:8080/api/v1/calculate.
+## Описание
+Этот проект реализует веб-сервис, который вычисляет арифметические выражения, переданные пользователем через HTTP-запрос.
 
-Пример запроса с использованием PowerShell
-Для тестирования работы сервиса используйте команду Invoke-RestMethod в PowerShell:
+## Запуск сервиса
 
-powershell
-Копировать код
+1. Установите [Go](https://go.dev/dl/).
+2. Склонируйте проект с GitHub:
+    ```bash
+    git clone https://github.com/your-username/calc_service.git
+    ```
+3. Перейдите в папку проекта и запустите сервер:
+    ```bash
+    go run ./cmd/calc_service/...
+    ```
+4. Сервис будет доступен по адресу: [http://localhost:8080/api/v1/calculate](http://localhost:8080/api/v1/calculate).
+
+## Пример запроса с использованием PowerShell
+
+Для тестирования работы вашего сервиса используйте команду `Invoke-RestMethod` в PowerShell:
+
+```powershell
 Invoke-RestMethod -Uri "http://localhost:8080/api/v1/calculate" `
 -Method POST `
 -Headers @{"Content-Type"="application/json"} `
 -Body '{"expression": "2+2*2"}'
-Пояснение:
-
--Uri "http://localhost:8080/api/v1/calculate" — URL, к которому отправляется запрос.
--Method POST — метод запроса.
--Headers @{"Content-Type"="application/json"} — заголовок, указывающий формат запроса.
--Body '{"expression": "2+2*2"}' — тело запроса с выражением для вычисления.
