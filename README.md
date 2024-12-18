@@ -23,3 +23,4 @@ Invoke-RestMethod -Uri "http://localhost:8080/api/v1/calculate" `
 -Method POST `
 -Headers @{"Content-Type"="application/json"} `
 -Body '{"expression": "2+2*2"}'
+Если вы спросите зачем и папка и файлы это бы сделанно для "всякого случия" а то может не дай бог что то случится
